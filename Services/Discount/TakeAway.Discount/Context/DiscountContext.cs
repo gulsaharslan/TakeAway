@@ -17,11 +17,6 @@ namespace TakeAway.Discount.Context
         }
 
         public IDbConnection CreateConnection() => new SqlConnection(_connectionString);
-       
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Server=KAAN-MONSTER\\SQLEXPRESS; initial Catalog=TakeAwayDiscountDb; integrated Security=true");
-        }
 
         public DbSet<Coupon> Coupons { get; set; }
     }
