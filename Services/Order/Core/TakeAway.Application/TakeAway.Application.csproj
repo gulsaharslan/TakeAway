@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TakeAway.Domain\TakeAway.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\CQRS\Commands\OrderDetailCommands\" />
+    <Folder Include="Features\CQRS\Handlers\OrderDetailHandlers\" />
+    <Folder Include="Features\CQRS\Queries\OrderDetailQueries\" />
+    <Folder Include="Features\CQRS\Results\OrderDetailResults\" />
+  </ItemGroup>
+
 </Project>
