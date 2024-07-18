@@ -25,11 +25,12 @@ namespace TakeAway.Application.Features.CQRS.Handlers.OrderDetailHandlers
             {
                 OrderDetailId = values.OrderDetailId,
                 Amount = values.Amount,
-                ProductName= values.ProductName,
-                ProductId= values.ProductId,
-                TotalPrice= values.TotalPrice,
-                Price= values.Price,
-                OrderingId=values.OrderingId,
+                ProductName = values.ProductName,
+                ProductId = values.ProductId,
+                TotalPrice = values.TotalPrice,
+                Price = values.Price,
+                OrderingId = values.OrderingId,
             };
         }
+    }
 }
