@@ -12,7 +12,7 @@ namespace TakeAway.Persistance.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost,1440;initial Catalog=TakeAwayOrderDb;integrated Security=true");
+            optionsBuilder.UseSqlServer("Server=KAAN-MONSTER\\SQLEXPRESS;initial Catalog=TakeAwayOrderDb;integrated Security=true");
         }
 
         public DbSet<Address> Addresses { get; set; }
