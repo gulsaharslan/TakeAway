@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using TakeAway.IdentityServer.Dtos;
 using TakeAway.IdentityServer.Models;
@@ -29,13 +32,16 @@ namespace TakeAway.IdentityServer.Controllers
                 Surname = createUserRegisterDto.Surname,
             };
 
-            var result=await _userManager.CreateAsync(values,createUserRegisterDto.Password);
-            if (result.Succeeded)
             {
-                return Ok("Başarıyla eklendi");
-            }
+                var result = await _userManager.CreateAsync(values, createUserRegisterDto.Password);
+                if (result.Succeeded)
+                {
+                    return Ok("Başarıyla eklendi");
+                }
 
-            return Ok("Bir hata oluştu");
+                return Ok("Bir hata oluştu");
+            }
+            
         }
     }
 }
