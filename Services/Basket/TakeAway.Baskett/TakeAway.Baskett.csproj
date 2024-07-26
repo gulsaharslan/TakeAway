@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="LoginServices\" />
     <Folder Include="Settings\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
