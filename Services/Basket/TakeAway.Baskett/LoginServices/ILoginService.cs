@@ -1,0 +1,7 @@
+﻿namespace TakeAway.Baskett.LoginServices
+{
+    public interface ILoginService
+    {
+        public string GetUserId {  get; }
+    }
+}

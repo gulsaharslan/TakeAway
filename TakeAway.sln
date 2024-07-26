@@ -41,7 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.Persistance", "Ser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.OrderPresentation", "Services\Order\Presentation\TakeAway.OrderPresentation\TakeAway.OrderPresentation.csproj", "{514306D6-5026-48DF-A633-DB0A3E3C49B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAway.Baskett", "Services\Basket\TakeAway.Baskett\TakeAway.Baskett.csproj", "{D0AFF2B8-391A-47A2-883F-FFC3AE7FAD91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.Baskett", "Services\Basket\TakeAway.Baskett\TakeAway.Baskett.csproj", "{D0AFF2B8-391A-47A2-883F-FFC3AE7FAD91}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comment", "Comment", "{D794FB2A-A70E-449E-93DD-CFD03AF0EECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAway.Comment", "Services\Comment\TakeAway.Comment\TakeAway.Comment.csproj", "{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,10 @@ Global
 		{D0AFF2B8-391A-47A2-883F-FFC3AE7FAD91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0AFF2B8-391A-47A2-883F-FFC3AE7FAD91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0AFF2B8-391A-47A2-883F-FFC3AE7FAD91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +111,8 @@ Global
 		{C319392E-23A4-4967-9FF6-6F16BE841453} = {BEF8AE9A-7486-40EB-95C9-19D1606D55A4}
 		{514306D6-5026-48DF-A633-DB0A3E3C49B7} = {0AAB0425-5389-4589-B1A6-9DFA56D391D9}
 		{D0AFF2B8-391A-47A2-883F-FFC3AE7FAD91} = {9938A629-EDC3-4A1D-899B-A782EB4781FA}
+		{D794FB2A-A70E-449E-93DD-CFD03AF0EECB} = {BF79BC02-508F-4BBD-9136-7B254848330A}
+		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77} = {D794FB2A-A70E-449E-93DD-CFD03AF0EECB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {87BACB84-90FA-4782-828B-B70E96BC3510}

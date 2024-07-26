@@ -1,22 +1,32 @@
-﻿using TakeAway.Baskett.Dtos;
+﻿using System.Text.Json;
+using TakeAway.Baskett.Dtos;
+using TakeAway.Baskett.Settings;
 
 namespace TakeAway.Baskett.Services
 {
     public class BasketService : IBasketService
     {
-        public Task DeleteBasket(string UserId)
+        private readonly RedisService _redisService;
+
+        public BasketService(RedisService redisService)
         {
-            throw new NotImplementedException();
+            _redisService = redisService;
         }
 
-        public Task<BasketTotalDto> GetBasket(string UserId)
+        public async Task DeleteBasket(string UserId)
         {
-            throw new NotImplementedException();
+            await _redisService.GetDb().KeyDeleteAsync(UserId);
         }
 
-        public Task SaveBasket(BasketTotalDto basket)
+        public async Task<BasketTotalDto> GetBasket(string UserId)
         {
-            throw new NotImplementedException();
+            var basket=await _redisService.GetDb().StringGetAsync(UserId);
+            return JsonSerializer.Deserialize<BasketTotalDto>(basket);
+        }
+
+        public async Task SaveBasket(BasketTotalDto basket)
+        {
+            await _redisService.GetDb().StringSetAsync(basket.UserId,JsonSerializer.Serialize(basket));
         }
     }
 }
