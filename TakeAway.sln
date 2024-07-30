@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.Baskett", "Service
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comment", "Comment", "{D794FB2A-A70E-449E-93DD-CFD03AF0EECB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAway.Comment", "Services\Comment\TakeAway.Comment\TakeAway.Comment.csproj", "{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.Comment", "Services\Comment\TakeAway.Comment\TakeAway.Comment.csproj", "{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAway.WebUI", "Frontend\TakeAway.WebUI\TakeAway.WebUI.csproj", "{DFDC63BA-B673-49E8-A613-6672CC116915}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +91,10 @@ Global
 		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFDC63BA-B673-49E8-A613-6672CC116915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDC63BA-B673-49E8-A613-6672CC116915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDC63BA-B673-49E8-A613-6672CC116915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDC63BA-B673-49E8-A613-6672CC116915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +119,7 @@ Global
 		{D0AFF2B8-391A-47A2-883F-FFC3AE7FAD91} = {9938A629-EDC3-4A1D-899B-A782EB4781FA}
 		{D794FB2A-A70E-449E-93DD-CFD03AF0EECB} = {BF79BC02-508F-4BBD-9136-7B254848330A}
 		{DBFEF9ED-1D6A-4C4E-9CC5-7C1B125C9B77} = {D794FB2A-A70E-449E-93DD-CFD03AF0EECB}
+		{DFDC63BA-B673-49E8-A613-6672CC116915} = {5C13967A-A688-435E-B9DF-C1A67349CE9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {87BACB84-90FA-4782-828B-B70E96BC3510}
