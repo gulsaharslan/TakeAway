@@ -1,8 +1,37 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-<h1>@ViewBag.v1</h1>
-<h1>@ViewBag.v2</h1>
+@section Scripts{
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+    <div class="continer">
+        <br />
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <script type="text/javascript">
+                        $(document).ready(() => {
+                            var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7025/signalrhub").build();
+                            $("#constatus").text(connection.state);
+                            connection.start().then(() => {
+                                $("#constatus").text(connection.state);
+                                setInterval(() => {
+                                    connection.invoke("SendStatistics");
+                                }, 1000);
+                            }).catch((err) => { console.log(err) });
+                            connection.on("ReceiveStatusYolda", (value1) => {
+                                $("#textstatusyolda").text(value1);
+                            })
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="col-md-8 offset-2">
+    <div class="alert alert-primary"> Bağlantının Durumu: <strong id="constatus"></strong></div>
+    <div class="alert alert-primary"> Yoldaki Ürün Sayısı: <strong id="textstatusyolda"></strong></div>
+</div>
